@@ -15,7 +15,7 @@ public:
         if((rock.size() > 0) + (paper.size() > 0) + (sissor.size() > 0) == 1) {
             std::string choice;
             choice = rock.size() > 0 ? "Rock" : paper.size() > 0 ? "Paper" : "Sissor";
-            std::cout << "Result: Draw. Both Player and Computer chose: " << choice << std::endl;
+            std::cout << "Result: Draw. Both Player chose: " << choice << std::endl;
             std::cout << "New game? 0 or 1: ";
             int new_game;
             std::cin >> new_game;
