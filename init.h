@@ -55,5 +55,6 @@ public:
             std::cout << std::endl;
         }
     }
+    ~init(){};
 };
 

@@ -15,12 +15,8 @@ public:
         if((rock.size() > 0) + (paper.size() > 0) + (sissor.size() > 0) == 1) {
             std::string choice;
             choice = rock.size() > 0 ? "Rock" : paper.size() > 0 ? "Paper" : "Sissor";
-            std::cout << "Result: Draw. Both Player chose: " << choice << std::endl;
-            std::cout << "New game? 0 or 1: ";
-            int new_game;
-            std::cin >> new_game;
-            if(new_game) gameplay game;
-            return;
+            std::cout << "Result: Draw. All Players chose: " << choice << std::endl;
+            check_game_state(name);
         }
         else if((rock.size() > 0) + (paper.size() > 0) + (sissor.size() > 0) == 3){
             std::cout << "Result: Draw" << std::endl;
@@ -66,13 +62,7 @@ public:
             std::cout << "Players who lose: ";
             for(int i = 0; i < lose.size(); i++) std::cout << lose[i] << " ";
             std::cout << "chose " << lose_choice << std::endl;
-            check_game_state(win);
-            std::cout << "New game? 0 or 1: ";
-            int new_game;
-            std::cin >> new_game;
-            if(new_game) gameplay game;
-            return;
-            // }            
+            check_game_state(win);          
         }
 
     };
@@ -111,6 +101,6 @@ public:
              }
             gameplay_logic();
         }
-        
     }
+    ~gameplay(){};
 };  
