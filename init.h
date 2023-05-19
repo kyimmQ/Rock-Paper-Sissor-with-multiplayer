@@ -9,7 +9,6 @@ public:
     std::vector<std::string> name;
     std::set<std::string> unique_name;
     init(){
-        num_of_player = 0;
         init_logic();
     };
     void init_logic(){
